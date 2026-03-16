@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edusync.controllers.StudentDashboardController">
+    
+    <top>
+        <HBox spacing="20.0" style="-fx-background-color: #2b5797;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+            </padding>
+            <Label text="EduSync | Student Portal" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="15.0" style="-fx-background-color: #f4f4f4;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+            <Label fx:id="welcomeLabel" text="Welcome, Student!">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Label>
+            <Label fx:id="rollNumberLabel" text="Roll No: " />
+            <Label fx:id="departmentLabel" text="Dept: " />
+            
+            <VBox spacing="5.0" style="-fx-background-color: #ffffff; -fx-padding: 10; -fx-border-color: #cccccc; -fx-border-radius: 5;">
+                <Label text="Current CGPA" textFill="#666666" />
+                <Label fx:id="cgpaLabel" text="0.0" textFill="#2b5797">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+            </VBox>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="10.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+            <Label text="My Enrolled Courses">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Label>
+            
+            <TableView fx:id="courseTable" prefHeight="350.0" prefWidth="400.0">
+              <columns>
+                <TableColumn fx:id="colCode" prefWidth="100.0" text="Course Code" />
+                <TableColumn fx:id="colName" prefWidth="200.0" text="Course Name" />
+                <TableColumn fx:id="colCredits" prefWidth="80.0" text="Credits" />
+              </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

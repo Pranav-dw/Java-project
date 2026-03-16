@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edusync.controllers.FacultyDashboardController">
+    
+    <top>
+        <HBox spacing="20.0" style="-fx-background-color: #2e7d32;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+            </padding>
+            <Label text="EduSync | Faculty Portal" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="15.0" style="-fx-background-color: #f4f4f4;" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20.0" left="15.0" right="15.0" top="20.0" />
+            </padding>
+            <Label fx:id="welcomeLabel" text="Welcome, Professor">
+                <font>
+                    <Font name="System Bold" size="15.0" />
+                </font>
+            </Label>
+            <Label fx:id="deptLabel" text="Department: " />
+            <Label fx:id="subjectLabel" text="Subject: " />
+            
+            <VBox spacing="10.0">
+                <VBox.margin>
+                    <Insets top="20.0" />
+                </VBox.margin>
+                <Button text="Take Attendance" prefWidth="170.0" />
+                <Button text="Grade Assignments" prefWidth="170.0" />
+            </VBox>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="10.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+            <Label text="My Assigned Classes">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Label>
+            
+            <TableView fx:id="courseTable" prefHeight="350.0" prefWidth="450.0">
+              <columns>
+                <TableColumn fx:id="colCode" prefWidth="100.0" text="Course Code" />
+                <TableColumn fx:id="colName" prefWidth="250.0" text="Course Name" />
+                <TableColumn fx:id="colCredits" prefWidth="100.0" text="Credits" />
+              </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>
