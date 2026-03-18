@@ -8,9 +8,9 @@ import java.sql.SQLException;
 public class DBConfig {
 
     
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/edusync_db";
+    private static final String DB_URL = "jdbc:";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "Pranav@202005"; 
+    private static final String DB_PASSWORD = "Password"; 
 
     public static Connection getConnection() {
         Connection connection = null;
